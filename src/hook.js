@@ -1,21 +1,29 @@
 /* eslint-disable import/prefer-default-export */
 import { useEffect } from 'react';
 
-export const useStorage = (state, stateUpdate) => {
-    const saveStorage = () => {
+export const useStorage = () => {
+    function saveData(items) {
+        localStorage.setItem('savedState', JSON.stringify(items));
+    }
+
+    function getStorageData() {
+        return JSON.parse(localStorage.getItem('savedState'));
+    }
+
+    function saveStorage(state) {
         useEffect(() => {
             window.addEventListener('beforeunload', () => {
-                localStorage.setItem('savedState', JSON.stringify(state));
+                saveData(state);
             });
         });
-    };
+    }
 
-    const getStorage = () => {
+    function getStorage(stateUpdateFunction) {
         useEffect(() => {
-            const savedState = JSON.parse(localStorage.getItem('savedState'));
-            stateUpdate(savedState);
+            const savedData = getStorageData();
+            stateUpdateFunction(savedData);
         }, []);
-    };
+    }
 
     return [saveStorage, getStorage];
 };

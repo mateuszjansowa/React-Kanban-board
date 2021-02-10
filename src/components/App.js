@@ -14,10 +14,10 @@ import '../styles/app.scss';
 const App = () => {
     const [tasks, setTasks] = useState([]);
 
-    const [saveStorage, getStorage] = useStorage(tasks, setTasks);
+    const [saveStorage, getStorage] = useStorage();
 
-    saveStorage();
-    getStorage();
+    saveStorage(tasks);
+    getStorage(setTasks);
 
     const columnSettings = [
         { name: 'Zadania', id: 1, limit: Infinity },
@@ -65,7 +65,6 @@ const App = () => {
                 const targetedTaskIndex = tasks.findIndex(task => task.id === id);
                 tasksCopy.splice(targetedTaskIndex, 1);
 
-                // Błąd eslint do naprawy
                 // eslint-disable-next-line no-unused-expressions
                 e.target.id === 'forward' ? (targetedTask.idColumn += 1) : (targetedTask.idColumn -= 1);
                 tasksCopy.push(targetedTask);
