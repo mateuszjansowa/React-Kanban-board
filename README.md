@@ -50,7 +50,8 @@ Your Kanban Board is ready at port 8080.
 
 - LocalStorage enables the app to store the data inside it. I created my **custom hook** called **`useStorage`** to handle data saving. Data is uploaded from localStorage as soon as the Kanban Board is mounted. Tasks are saved when the explorer tab is going to be closed.
 
-    const [saveStorage, getStorage] = useStorage();
+        const [saveStorage, getStorage] = useStorage();
+
 
 - What's worth mentioning is the fact that columns are rendered dynamically. The app follows the rules you specify. You can adjust the app in the way you our your company organizes work.
 
