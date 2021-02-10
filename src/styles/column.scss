@@ -1,0 +1,24 @@
+@import 'var.scss';
+
+.column {
+    background-color: $lightblue;
+    box-shadow: 8px 8px 18px #b8b8b8, -8px -8px 18px $white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 500px;
+    min-width: 250px;
+    padding: 10px;
+    width: 24%;
+
+    &__name {
+        font-family: 'Magra', sans-serif;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    &__limit-number {
+        font-family: 'Magra', sans-serif;
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,59 @@
+@import 'var.scss';
+
+.task {
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 0px 2px 0 $white;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    &__description {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+    &__author {
+        color: $darkblue;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    &__summary {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: $darkblue;
+        display: inline-block;
+        font-size: 1.1em;
+        font-weight: 700;
+        margin-left: 5px;
+        text-transform: uppercase;
+        vertical-align: 5px;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+    }
+
+    &__icon {
+        color: $darkblue;
+        cursor: pointer;
+        font-size: 2em;
+        padding: 5px;
+        transition: 0.3s linear;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    &__date {
+        font-size: 0.9em;
+    }
+}

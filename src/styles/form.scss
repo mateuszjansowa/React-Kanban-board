@@ -1,0 +1,70 @@
+@import 'var.scss';
+
+.form {
+    align-self: center;
+    backdrop-filter: blur(12px);
+    background-color: rgba(211, 224, 234, 0.5);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    min-width: 30%;
+    padding: 20px;
+
+    &__label {
+        font-size: 1.2em;
+        text-align: left;
+    }
+
+    &__input {
+        align-items: flex-start;
+        border-radius: 5px;
+        border: 1px solid $lightblue;
+        display: block;
+        font-size: 0.8em;
+        margin-top: 10px;
+        outline: 1px solid $lightblue;
+        padding: 5px;
+        transition: 0.2s linear;
+        width: 150px;
+
+        &:focus {
+            box-shadow: 0 0 6px 0 $darkblue;
+        }
+    }
+
+    &__button-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__button {
+        align-self: center;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 2px solid $blue;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+        height: auto;
+        padding: 10px 16px;
+        transition: 0.2s linear;
+
+        &:hover {
+            box-shadow: 0 0 6px 0 $blue;
+        }
+
+        &--remove {
+            font-size: 0.88em;
+            &:hover {
+                box-shadow: 0 0 6px 0 black;
+            }
+        }
+    }
+}

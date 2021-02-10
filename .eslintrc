@@ -1,0 +1,26 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb", "prettier", "prettier/react"],
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+        "indent": ["error", 4],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/state-in-constructor": [0, "never"],
+        "jsx-a11y/label-has-associated-control": [
+            "error",
+            {
+              "labelComponents": [],
+              "labelAttributes": [],
+              "controlComponents": [],
+              "assert": "either",
+              "depth": 25
+            }
+          ]
+    },
+    "globals": {
+        "window": true,
+        "document": true,
+        "localStorage": true
+    }
+}

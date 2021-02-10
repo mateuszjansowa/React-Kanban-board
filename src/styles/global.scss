@@ -1,0 +1,19 @@
+@import 'var.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+/* font-family: 'Magra', sans-serif;
+font-family: 'Montserrat', sans-serif; */
