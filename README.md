@@ -1,5 +1,7 @@
 # Kanban board
 
+![Kanban Board UI](https://github.com/mateuszjansowa/React-Kanban-board/blob/main/assets/AppUI.PNG?raw=true)
+
 Thanks for viewing my repository! I'd like to introduce you to my Kanban Board app built with **React** according to [**ESLint Airbnb rules**](https://github.com/airbnb/javascript/tree/master/react).
 
 Kanban work methodology is used widely in many companies. It is often related to when Agile is not efficient or impossible to introduce. You can read more about Kanban [here](https://www.atlassian.com/agile/kanban)
